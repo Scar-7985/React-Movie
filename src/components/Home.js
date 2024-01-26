@@ -1,18 +1,16 @@
 import React from 'react';
-// import { AppContext } from './Context';
-import { useGlobalContext } from './Context';
+// import { useGlobalContext } from './Context';
+import Search from './Search';
+import Movies from './Movies';
 
 const Home = () => {
 
-  // const name = useContext(AppContext);
-  const name = useGlobalContext();
+  // const name = useGlobalContext();
 
   return (
     <>
-      <h1>
-      Home Page
-      </h1>
-      <h2>{name}</h2>
+    <Search />
+      <Movies />
     </>
   )
 }
