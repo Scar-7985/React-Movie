@@ -6,7 +6,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 40px;
 }
 
 nav .logo {
@@ -15,38 +15,34 @@ nav .logo {
     font-weight: bold;
 }
 
-nav .search-bar {
+nav form {
     /* border: 1px solid red; */
     display: flex;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
-nav .search-bar input {
+nav form input {
     background-color: #fff;
     width: 400px;
     padding: 0 30px;
     font-size: 16px;
     height: 44px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-radius: 10px;
     border: none;
     outline: none;
 }
 
-nav .search-bar button {
-    height: 44px;
-    /* width: 70px; */
-    border: none;
-    background-color: orange;
-    /* border: 1px solid red; */
-    color: white;
-    border-top-right-radius: 30px; 
-    border-bottom-right-radius: 30px; 
-    cursor: pointer;
-    padding: 0 30px;
+nav form input:focus {
+    box-shadow: 0 0 4px gray;
 }
 
-nav .search-bar button .fa-solid {
+.card-error {
+    text-align: center;
+    width: 100vw;
+    height: auto;
     font-size: 24px;
+    color: white;
+    background-color: red;
+    padding: 10px 0;
 }

@@ -15,20 +15,19 @@ const Movies = () => {
 
                 {movie.map((curMovie) => {
 
-                    const { imdbId, Title, Poster, Year } = curMovie;
+                    const { imdbID, Title, Poster, Year } = curMovie;
+                    const movieName = Title.substring(0, 20);
 
-                    return <>
-                        <NavLink to={`movie/${imdbId}`}>
-                            <div className="card">
-                                <div className="image">
-                                    <img src={Poster} alt={Title} />
-                                </div>
-                                <div className="cardinfo">
-                                    <p>{Title}-{Year}</p>
-                                </div>
+
+                    return (
+                        <NavLink to={`movie/${imdbID}`} key={imdbID}>
+                            <div className="image">
+                                <img src={Poster} alt={Title} />
                             </div>
+                            <div className="info">{movieName.length > 20 ? `${movieName}` : movieName } - ({Year})...</div>
                         </NavLink>
-                    </>
+                    )
+
                 })}
 
             </div>
