@@ -2,7 +2,7 @@
 nav {
     width: 100vw;
     height: 80px;
-    background-color: #ffd32a;
+    background-color: gold;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,8 +41,8 @@ nav form input:focus {
     text-align: center;
     width: 100vw;
     height: auto;
-    font-size: 24px;
-    color: white;
-    background-color: red;
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
     padding: 10px 0;
 }

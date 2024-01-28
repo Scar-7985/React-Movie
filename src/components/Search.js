@@ -4,7 +4,8 @@ import { useGlobalContext } from './Context'
 
 const Search = () => {
 
-  const { searchQuery, setSearchQuery, isError } = useGlobalContext();
+  const { setSearchQuery, isError } = useGlobalContext();
+  // console.log(isError.show)
 
   return (
     <>
@@ -14,13 +15,12 @@ const Search = () => {
         <form action='#' onSubmit={(e) => e.preventDefault()}>
           <input 
           type="text" 
-          placeholder='Search your favorite movie...' 
-          value={searchQuery} 
+          placeholder='Search your favorite movie...'
           onChange={(e) => setSearchQuery(e.target.value)} />
 
         </form>
       </nav>
-      <div className="card-error">
+      <div className="card-error" style={{display: isError.show ? 'block' : 'none'}}>
         {isError.show && isError.msg}
       </div>
       </>

@@ -16,7 +16,7 @@ const AppProvider = ({ children }) => {
     //======== Home Page for Movie site without search /========/
     
     const getMovies = async (url) => {
-
+        setIsLoading(true);
         try{
             const res = await fetch(url);
             const data = await res.json();
@@ -24,6 +24,10 @@ const AppProvider = ({ children }) => {
 
             if(data.Response === "True"){
                 setIsLoading(false);
+                setIsError({
+                    show: false,
+                    msg: "",
+                })
                 setMovie(data.Search);
             } else {
                 setIsError({
@@ -56,4 +60,4 @@ const useGlobalContext = () => {
     return useContext(AppContext)
 }
 
-export { AppContext, AppProvider, useGlobalContext };
+export { AppContext, AppProvider, useGlobalContext, API_URL };
