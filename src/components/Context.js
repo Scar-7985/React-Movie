@@ -49,6 +49,7 @@ const AppProvider = ({ children }) => {
         return () => clearTimeout(timer);
     }, [searchQuery])
 
+
     //======== Home Page for Movie site without search /========/
     
     return <AppContext.Provider value={{ isLoading, movie, isError, searchQuery, setSearchQuery}}>
